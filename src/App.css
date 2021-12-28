@@ -1,3 +1,7 @@
+*{
+  padding: 0px;
+  /* margin: 0px; */
+}
 .App {
   text-align: center;
 }
@@ -14,14 +18,36 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 50%;
+  background-color: orange;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: relative;
+
+}
+.App-header-right {
+  width: 50%;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: yellow;
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+}
+.list-collections {
+  /* position: absolute; */
+  /* width: 50%;
+  max-height: 30%; */
+  /* border: 2px solid black; */
+  /* overflow-y: scroll; */
 }
 
 .App-link {
@@ -35,4 +61,69 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+ul {
+  list-style-type: none;
+}
+#todo_input {
+  border: none;
+  border-bottom: 3px solid orangered;
+  outline: none;
+  padding: 4px;
+  margin: 4px;
+}
+.add-btn {
+  padding: 4px;
+  border: 1px solid black;  
+  box-shadow: 4px 4px 4px rgb(78, 78, 78);
+  border-radius: 3px;
+}
+.add-btn:hover {
+  background-color: green;
+  color: whitesmoke;
+
+}
+.li {
+  font-size: small;
+  background-color: rgb(151, 151, 151);
+  margin: 5px;
+  padding: 5px;
+  border-radius: 4px;
+}
+.li-btn {
+  margin-right: 20px;
+  background-color: white;
+  padding: 0px 10px;
+  border: 1px solid black;
+  outline: black;
+  font-weight: 700;
+  color: grey;
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px grey;
+}
+
+.li-btn:hover {
+  background-color: red;
+  color: black;
+  
+}
+
+
+
+@media only screen and (max-width:778px) {
+  .App-header {
+    width: 100%;
+    height: 50vh;
+    z-index: 50;
+    
+  }
+  .App-header-right {
+    width: 100%;
+   height: 50vh;
+   position: relative;
+  
+  }
+  
 }
